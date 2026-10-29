@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cobview"
+version = "0.2.0"
+description = "Zero-copy, copybook-typed views over COBOL data, and in-process COBOL calls, from Python"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Nickolas Adrian Papamichail" }]
+dependencies = []
+
+[project.optional-dependencies]
+numpy = ["numpy>=1.24"]
+test = ["pytest>=7", "numpy>=1.24"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
